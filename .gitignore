@@ -1,0 +1,11 @@
+bin/
+*.class
+
+.DS_Store
+Thumbs.db
+
+.settings/
+*.launch
+*.prefs
+
+*.psd
