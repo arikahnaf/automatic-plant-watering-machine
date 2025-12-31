@@ -7,6 +7,7 @@ A Java-based IoT application that automatically waters plants by monitoring soil
 ---
 
 ## 🧪 How it works
+
 1. The Arduino reads analog moisture values via pin 15.
 2. These values are sent to the Java app via serial connection (COM3).
 3. The OLED displays the current moisture level.
@@ -23,30 +24,36 @@ A Java-based IoT application that automatically waters plants by monitoring soil
 ## 🔧 Hardware Components
 
 ### 🌿 Moisture Sensor
+
 - Detects soil moisture level
 - Sends analog signals to the Arduino
 - Helps determine when the plant needs watering
 
 ### ⚙️ MOSFET (Transistor Switch)
+
 - Acts as an electronic switch
 - Controls the power supplied to the water pump
 - Triggered by the Arduino to pump water only when needed
 
 ### 🧠 Arduino Board (with Firmata)
+
 - Acts as the brain of the system
 - Reads data from the moisture sensor
 - Sends control signals to the MOSFET and water pump
 - Communicates with the PC for live graphing using Java and StdDraw
 
 ### 💧 Water Pump
+
 - Activates when moisture levels are low
 - Delivers water to the plant via a tube or pipe
 
 ### 🔋 9V Battery
+
 - Powers the entire circuit
 - Portable power solution for small setups
 
 ### 📟 SSD1306 OLED Display
+
 - Shows live readings of soil moisture
 - Connected via I2C to the Arduino board
 
@@ -55,11 +62,13 @@ A Java-based IoT application that automatically waters plants by monitoring soil
 ## 💻 Software Features
 
 - **Java-based Control and Visualization:**
+
   - Uses [Firmata4j](https://github.com/kurbatov/firmata4j) to communicate with the Arduino
   - Uses `SSD1306` for OLED display integration
   - Implements `StdDraw` to render a live Voltage vs Time graph
 
 - **Live Moisture Monitoring:**
+
   - Timer task reads the moisture level every second
   - If the reading falls below a threshold, the water pump is activated
 
@@ -76,22 +85,23 @@ The project follows a modular **Model–View–Controller (MVC)** inspired archi
 
 ```
 src/
-├── model/                      # Core logic & hardware abstraction
-│   ├── WateringConfig.java     # Centralized configuration (pins, thresholds)
-│   ├── WateringLogic.java      # Pure decision-making logic
-│   ├── HardwareController.java # Firmata wrapper for Arduino I/O
-│   └── Dashboard.java          # OLED output and graph visualization
+├── model/                        # Core logic & hardware abstraction
+│   ├── WateringConfig.java    	  # Centralized configuration (pins, thresholds)
+│   ├── WateringLogic.java        # Pure decision-making logic
+│   ├── HardwareController.java   # Firmata wrapper for Arduino I/O
+│   └── Dashboard.java            # OLED output and graph visualization
 │
-├── console_app/                # Application entry point
-│   └── Main.java               # Initializes components and runs the loop
+├── console_app/                  # Application entry point
+│   └── Main.java                 # Initializes components and runs the loop
 │
-└── junit_tests/                # Automated tests
-    └── WateringLogicTest.java  # Verifies logic without hardware dependency
+└── junit_tests/                  # Automated tests
+    └── WateringLogicTest.java    # Verifies logic without hardware dependency
 ```
 
 ---
 
 ## 🚀 Future Improvements
+
 - Add water level detection in the tank
 - Log data to CSV for analysis
 - Add a mobile notification or dashboard
@@ -100,7 +110,9 @@ src/
 ---
 
 ## 🧑‍💻 Credits
+
 Built using:
+
 - Java + Firmata4j
-- Arduino Uno + Sensors
-- StdDraw (from Princeton's IntroCS library)
+- Grove Beginner Kit for Arduino + Sensors
+- StdDraw (from Princeton's standard input and output library)
