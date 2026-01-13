@@ -1,6 +1,6 @@
 # Automatic Plant Watering Machine 🌱
 
-A Java-based IoT application that automatically waters plants by monitoring soil moisture levels. This project demonstrates **Object-Oriented Design**, **Hardware-Software Integration**, and **clean architectural patterns** without relying on heavy frameworks. It includes a live voltage vs. time graph and uses a HashMap to log readings over time.
+A Java-based IoT application that automatically waters plants by monitoring soil moisture levels. This project demonstrates **object-oriented design**, **hardware-software integration**, and **clean architectural patterns** without relying on heavy frameworks. It includes a live voltage vs. time graph and uses a HashMap to log readings over time.
 
 ![Machine Setup](assets/machine-setup.jpeg)
 
