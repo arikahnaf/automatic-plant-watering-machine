@@ -4,8 +4,6 @@ A Java-based IoT application that automatically waters plants by monitoring soil
 
 ![Machine Setup](assets/machine-setup.jpeg)
 
----
-
 ## 🧪 How it works
 
 1. The Arduino reads analog moisture values via pin 15.
@@ -18,8 +16,6 @@ A Java-based IoT application that automatically waters plants by monitoring soil
 6. When the soil is sufficiently wet:
    - The Java app again sends a signal to pin 2.
    - The MOSFET switches off the pump.
-
----
 
 ## 🔧 Hardware Components
 
@@ -57,18 +53,14 @@ A Java-based IoT application that automatically waters plants by monitoring soil
 - Shows live readings of soil moisture
 - Connected via I2C to the Arduino board
 
----
-
 ## 💻 Software Features
 
 - **Java-based Control and Visualization:**
-
   - Uses [Firmata4j](https://github.com/kurbatov/firmata4j) to communicate with the Arduino
   - Uses `SSD1306` for OLED display integration
   - Implements `StdDraw` to render a live Voltage vs Time graph
 
 - **Live Moisture Monitoring:**
-
   - Timer task reads the moisture level every second
   - If the reading falls below a threshold, the water pump is activated
 
@@ -76,8 +68,6 @@ A Java-based IoT application that automatically waters plants by monitoring soil
   - Voltage readings plotted in real-time using `StdDraw`
   - Axes labeled with time (seconds) and voltage (V)
   - Voltage readings are stored in a `HashMap<Integer, Long>` for potential data logging or analysis
-
----
 
 ## 📂 Project Structure
 
@@ -98,16 +88,12 @@ src/
     └── WateringLogicTest.java    # Verifies logic without hardware dependency
 ```
 
----
-
 ## 🚀 Future Improvements
 
 - Add water level detection in the tank
 - Log data to CSV for analysis
 - Add a mobile notification or dashboard
 - Optimize power consumption for longer battery life
-
----
 
 ## 🧑‍💻 Credits
 
