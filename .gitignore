@@ -1,11 +1,35 @@
-bin/
-*.class
-
-.DS_Store
-Thumbs.db
-
 .settings/
 *.launch
 *.prefs
 
 *.psd
+
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# Eclipse files
+.project
+.classpath
+.settings/
+
+# Build folders
+/bin/
+/target/
+/build/
+
+# Mac system files
+.DS_Store
+
+# Windows thumbnail cache
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.swp
+
+# Package files
+*.war
+*.ear
